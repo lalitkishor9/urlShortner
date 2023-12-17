@@ -13,3 +13,13 @@ GET /:id -- redirects the user to the original URL
 
 GET /URL/analytics/:id -- returns the clicks for the provided
 short id
+
+
+
+
+
+Used Packages 
+    Express
+    mongoose
+    nanoid -- to create short id
+    nodemon
