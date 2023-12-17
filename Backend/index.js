@@ -6,8 +6,8 @@ const {handleGetRedirectURL} = require('./controllers/url');
 
 const app = express();
 const PORT = 8001;
-
-connectToMongoDB('mongodb://127.0.0.1:27017/short-url').then(()=>{
+const MONGODB_URI = "mongodb://127.0.0.1:27017/short-url"
+connectToMongoDB(MONGODB_URI).then(()=>{
     console.log("Connected to MongoDB");
 }).catch((err)=>{
     console.log("Error occured", err);
