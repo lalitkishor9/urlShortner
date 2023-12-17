@@ -18,7 +18,7 @@ This is a URL shortener service app designed to shorten long URLs into more mana
 
 ### Steps
 
-1. Clone the repository: `git clone https://github.com/your_username/your_repo.git`
+1. Clone the repository: `git clone https://github.com/lalitkishor9/urlShortner`
 2. Install dependencies: `npm install`
 3. Configure environment variables:
    - Create a `.env` file based on `.env.example` and add necessary configurations.
