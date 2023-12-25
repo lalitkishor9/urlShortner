@@ -21,5 +21,10 @@ short id
 Used Packages 
     Express
     mongoose
-    nanoid -- to create short id
+    shortid -- to create short id
     nodemon
+
+
+-- Used ejs for Server side rendering i.e. to UI at server side
+
+--Now i am adding authentication (statefull) to the app
