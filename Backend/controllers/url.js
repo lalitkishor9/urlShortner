@@ -15,10 +15,12 @@ async function handleGenerateNewShortUrl(req, res){
             createdBy : req.user._id,
         });
         const allURL = await URL.find({createdBy : req.user._id})
-        return res.render('home',{
-            id: shortID,
-            urls: allURL,
-        });
+        // return res.render('home',{
+        //     id: shortID,
+        //     urls: allURL,
+        // });
+        return res.redirect("/");
+        
     } catch (error) {
         console.error(error);
         return res.status(500).send("Server Error");

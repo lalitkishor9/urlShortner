@@ -6,8 +6,11 @@ router.get('/',async(req, res)=>{
     if(!req.user)
     return res.redirect('/login');
     const allURL =await URL.find({createdBy : req.user._id});
+    var currentPath  = req.protocol + '://' + req.get('host');
+    console.log(currentPath);
     return res.render('home', {
         urls : allURL,
+        currentPath: currentPath,
     });
 })
 

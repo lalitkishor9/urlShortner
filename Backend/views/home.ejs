@@ -15,11 +15,11 @@
 </head>
 <body>
     <h1>URL Shortner</h1>
-    <div>
+    <!-- <div>
         <% if (locals.id) { %>
          <h2>Generated URL : https://myapp-jqb7.onrender.com/reurl/<%=id %></h2>
         <% } %>            
-    </div>
+    </div> -->
     <div>
         <form action="/url/" method="post">
             <label for="URL">Enter Your Original URL</label>
@@ -40,15 +40,18 @@
                         <th>ShortID</th>
                         <th>Redirect</th>
                         <th>clicks</th>
+                        <th>Url</th>
                     </thead>
                     <tbody>
                         
                             <% urls.forEach((url, index) => { %>
+                                <% var concatenatedString = currentPath + "/reurl/" + url.shortId; %>
                                 <tr>
                                     <td><%= index + 1 %></td>
                                     <td><%= url.shortId %></td>
                                     <td><%= url.redirectURL %></td>
                                     <td><%= url.visitHistory.length %></td>
+                                    <td><%= concatenatedString %></td>
                                 </tr>
                             <% }) %>
                     </tbody>
